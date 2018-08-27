@@ -1,14 +1,30 @@
-.container {
-  position: absolute;
-  top: 30%;
-  left: 10px;
-  text-align: center;
+.home nav {
+	width: 90px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	background: #275bd3;
+	position: fixed;
 }
-
-.container h2 {
-  font-size: 5rem;
+.home nav a {
+	border-bottom: 1px solid #258ecd;
+	display: block;
+	color: #fff;
+	font-size: 0.8em;
+	font-weight: 300;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	height: 90px;
+	text-decoration: none;
 }
-
-.container a {
-  font-size: 1.4rem;
+.home nav a:hover {
+	background: #0f275e;
+}
+.nav_button {
+	padding-top: 20px;
+	line-height: 2em;
+}
+.content {
+	margin-left: 90px;
 }

@@ -1,4 +1,7 @@
 {
-  "HOME": "/",
-  "COUNTER": "/counter"
+	"HOME": "/",
+	"COUNTER": "/counter",
+	"COURSES": "/courses",
+	"DOWNLOADING": "/downloading",
+	"SETTINGS": "/settings"
 }

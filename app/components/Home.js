@@ -1,20 +1,55 @@
 // @flow
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, HashRouter } from 'react-router-dom';
+import { Route } from 'react-router';
 import routes from '../constants/routes.json';
 import styles from './Home.css';
+import Courses from './Courses';
+import Downloading from './Downloading';
+import Settings from './Settings';
 
 type Props = {};
 
 export default class Home extends Component<Props> {
-  props: Props;
+	props: Props;
 
-  render() {
-    return (
-      <div className={styles.container} data-tid="container">
-        <h2>Home</h2>
-        <Link to={routes.COUNTER}>to Counter</Link>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<HashRouter>
+				<div className={styles.home} data-tid="container">
+					<nav>
+						<NavLink to={routes.COURSES}>
+							<div className={styles.nav_button}>
+								<i className="fas fa-book-reader fa-2x fa-fw" />
+								<br />
+								Courses
+							</div>
+						</NavLink>
+						<NavLink to={routes.DOWNLOADING}>
+							<div className={styles.nav_button}>
+								<i className="fas fa-cloud-download-alt fa-2x fa-fw" />
+								<br />
+								Downloading
+							</div>
+						</NavLink>
+						<NavLink to={routes.SETTINGS}>
+							<div className={styles.nav_button}>
+								<i className="fas fa-cogs fa-2x fa-fw" />
+								<br />
+								Settings
+							</div>
+						</NavLink>
+					</nav>
+					<div className={styles.content}>
+						<Route path={routes.COURSES} component={Courses} />
+						<Route
+							path={routes.DOWNLOADING}
+							component={Downloading}
+						/>
+						<Route path={routes.SETTINGS} component={Settings} />
+					</div>
+				</div>
+			</HashRouter>
+		);
+	}
 }
