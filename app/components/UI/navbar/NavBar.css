@@ -1,0 +1,30 @@
+.navbar {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	padding-left: 0;
+	margin: 15px 5px;
+	border: 1px solid #275bd3;
+	color: #275bd3;
+	list-style: none;
+}
+.navbar_item {
+	-ms-flex-preferred-size: 0;
+	flex-basis: 0;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	text-align: center;
+	display: block;
+}
+
+.navbar_item a,
+.navbar_item a:hover {
+	padding: 0.5rem 1rem;
+	display: block;
+	cursor: pointer;
+}
+.active {
+	background: #275bd3;
+	color: #fff;
+}

@@ -18,7 +18,8 @@
 	height: 90px;
 	text-decoration: none;
 }
-.home nav a:hover {
+.home nav a:hover,
+.home nav .active {
 	background: #0f275e;
 }
 .nav_button {
@@ -26,5 +27,12 @@
 	line-height: 2em;
 }
 .content {
-	margin-left: 90px;
+	width: 500px;
+	height: 100%;
+	top: 0;
+	left: 90px;
+	z-index: 1000;
+	background: #fff;
+	position: fixed;
+	padding: 5px;
 }
